@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <parameter name="url" value="https://www.google.com/"/>
-  <parameter name="email" value="srivallikodavati"/>
-  <test thread-count="5" name="ParametersAnnotation(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.softAssert.ParametersAnnotation">
+      <class name="com.testNG.concepts.ListenerTest">
         <methods>
+          <include name="close"/>
           <include name="setUp"/>
-          <include name="login" invocation-numbers="0"/>
+          <include name="TestFail"/>
         </methods>
-      </class> <!-- com.softAssert.ParametersAnnotation -->
+      </class> <!-- com.testNG.concepts.ListenerTest -->
     </classes>
-  </test> <!-- ParametersAnnotation(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
